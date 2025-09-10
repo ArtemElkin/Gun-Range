@@ -25,6 +25,6 @@ public class WeaponHandler
     }
     private void OnPointerHolding(Vector2 pointerPos)
     {
-        _weaponContainer.CurrentWeapon.Rotate(pointerPos);
+        //_weaponContainer.CurrentWeapon.Rotate(pointerPos);
     }
 }
