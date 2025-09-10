@@ -7,7 +7,6 @@ public class MouseController : InputController
     {
         if (Input.GetMouseButtonDown(0))
         {
-            startTouchPos = _mainCamera.ScreenToWorldPoint(Input.mousePosition);
             timeHolded = 0f;
         }
         else if (Input.GetMouseButton(0))
@@ -15,8 +14,8 @@ public class MouseController : InputController
              // Проверка на нажатие на UI элемент
             if (EventSystem.current.IsPointerOverGameObject())
                     return;
-                    
-            _weaponContainer.CurrentWeapon.Rotate(_mainCamera.ScreenToWorldPoint(Input.mousePosition));
+
+            RaisePointerHolding(_mainCamera.ScreenToWorldPoint(Input.mousePosition));
             timeHolded += Time.deltaTime;
         }
         else if (Input.GetMouseButtonUp(0))
@@ -24,8 +23,7 @@ public class MouseController : InputController
             // Проверка на нажатие на UI элемент
             if (EventSystem.current.IsPointerOverGameObject())
                     return;
-                    
-            _weaponContainer.CurrentWeapon.Shoot(timeHolded);
+            RaiseHoldingEnded(timeHolded);
         }
     }
 }

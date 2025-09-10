@@ -9,7 +9,6 @@ public class TouchController : InputController
             Touch touch = Input.GetTouch(0);
             if (touch.phase == TouchPhase.Began)
             {
-                startTouchPos = _mainCamera.ScreenToWorldPoint(touch.position);
                 timeHolded = 0f;
             }
             else if (touch.phase == TouchPhase.Moved || touch.phase == TouchPhase.Stationary)
@@ -18,7 +17,7 @@ public class TouchController : InputController
                 if (EventSystem.current.IsPointerOverGameObject())
                     return;
 
-                _weaponContainer.CurrentWeapon.Rotate(_mainCamera.ScreenToWorldPoint(touch.position));
+                RaisePointerHolding(_mainCamera.ScreenToWorldPoint(Input.mousePosition));
                 timeHolded += Time.deltaTime;
             }
             else if (touch.phase == TouchPhase.Ended)
@@ -27,7 +26,7 @@ public class TouchController : InputController
                 if (EventSystem.current.IsPointerOverGameObject())
                     return;
                     
-                _weaponContainer.CurrentWeapon.Shoot(timeHolded);
+                RaiseHoldingEnded(timeHolded);
             }
         }
     }

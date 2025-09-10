@@ -2,5 +2,5 @@ using UnityEngine;
 
 public interface IBounceable
 {
-    void Bounce(Vector2 normal);
+    public void Bounce(Vector2 normal);
 }

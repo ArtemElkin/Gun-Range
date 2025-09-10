@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public abstract class Weapon : MonoBehaviour, IWeapon
+public abstract class Weapon : MonoBehaviour, IWeapon, IRotatable
 {
     [SerializeField] protected Transform _gunpoint;
     [SerializeField] private Animator _animator;
