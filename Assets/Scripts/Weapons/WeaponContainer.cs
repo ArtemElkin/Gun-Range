@@ -61,6 +61,6 @@ public class WeaponContainer : MonoBehaviour
         _currentWeapon.Activate();
 
         // Поворот нового оружия в ту же сторону, что и предыдущее
-        //_currentWeapon.Rotate(lastTargetPos);
+        _currentWeapon.Rotate(lastTargetPos);
     }
 }
