@@ -12,7 +12,7 @@ public abstract class InputController : MonoBehaviour
         OnPointerHolding?.Invoke(position);
     }
 
-    // Защищённый метод для вызова события HoldingEnded (если нужно)
+    
     protected void RaiseHoldingEnded(float holdTime)
     {
         OnHoldingEnded?.Invoke(holdTime);

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8721475463393389408}
   - component: {fileID: 760189306715693790}
   - component: {fileID: 3088883109850404546}
+  - component: {fileID: 8204048489415587761}
   m_Layer: 0
   m_Name: Repulsive Weapon
   m_TagString: Untagged
@@ -70,6 +71,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _gunpoint: {fileID: 280951327778703306}
   _animator: {fileID: 760189306715693790}
+  _rotator: {fileID: 8204048489415587761}
+--- !u!114 &8204048489415587761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2422198064704721713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b5e673e28c0527d4b32b2864f414a7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pointOfRotationTransform: {fileID: 8721475463393389408}
   _minRotationAngle: -45
   _maxRotationAngle: 45
 --- !u!1 &5500226764996571231
