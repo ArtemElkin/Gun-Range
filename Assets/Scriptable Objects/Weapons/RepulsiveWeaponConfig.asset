@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RepulsiveWeaponConfig
   m_EditorClassIdentifier: 
   weaponPrefab: {fileID: 3088883109850404546, guid: db03dd13542a0286a80995cb5ec7d630, type: 3}
-  bulletPrefab: {fileID: 3758157354341925036, guid: 9a4669da06932c745b0d995f387f8be0, type: 3}
+  bulletPrefab: {fileID: 6889528005486827324, guid: eb0608736a69084c8b04282022705d0f, type: 3}
   weaponName: "\u041F\u0443\u0448\u043A\u0430 \u0441 \u043E\u0442\u0441\u043A\u0430\u043A\u0438\u0432\u0430\u044E\u0449\u0438\u043C\u0438
     \u0441\u043D\u0430\u0440\u044F\u0434\u0430\u043C\u0438"
   icon: {fileID: 0}
